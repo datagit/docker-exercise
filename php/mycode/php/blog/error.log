@@ -1,0 +1,1 @@
+[Sun Oct 24 00:20:15.223790 2021] [proxy_fcgi:error] [pid 1460:tid 140343886472960] [client 172.17.0.1:64690] AH01071: Got error 'Primary script unknown', referer: http://localhost:8080/

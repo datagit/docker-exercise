@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  mongo:
+    image: mongo:4.4
+    container_name: c-mongo
+    restart: always
+    ports:
+      - 27027:27017
+    # entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+  #   cpus: .9
+  # mongo_init_replicaset:
+  #   image: mongo:4.4
+  #   entrypoint: [ "/bin/sh", "-c", "sleep 3 && mongo mongo:27027 --eval 'rs.initiate({_id : \"rs0\",members: [{_id : 0, host: \"localhost:27027\"}]})'" ]
+  #   depends_on:
+  #     - mongo
