@@ -1,6 +1,6 @@
 ```bash
 # https://phoenixnap.com/kb/mysql-docker-container
-docker run --name=mysql_docker -d mysql/mysql-server:latest
+docker run -d --name mysql_docker mysql/mysql-server:latest
 
 docker ps -a
 docker logs mysql_docker
@@ -22,4 +22,17 @@ mysql
 
 #conenct to mysql in container
 mysql -uroot -p123456 -h127.0.0.1 -P6603 -e 'show global variables like "max_connections"';
+```
+
+Run Your First Apache Bench Load Performance Test
+```bash
+# https://www.tutorialspoint.com/apache_bench/apache_bench_environment_setup.htm
+# https://developer.okta.com/blog/2019/10/15/performance-testing-with-apache-bench
+# https://blog.cloud365.vn/linux/cong-cu-apache-benchmarking/
+
+# https://hub.docker.com/r/jordi/ab
+docker pull jordi/ab
+
+# To send an HTTP GET request you can use:
+docker run --rm jordi/ab -v 2 https://www.docker.com/
 ```
